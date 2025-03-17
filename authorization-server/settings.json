@@ -1,0 +1,45 @@
+{
+    "public": {},
+    "redisOplog": {
+        "redis": {
+            "port": 6379,
+            "host": "127.0.0.1"
+        },
+        "retryIntervalMs": 10000,
+        "mutationDefaults": {
+            "optimistic": true,
+            "pushToRedis": true
+        },
+        "debug": false
+    },
+    "clients": [
+        {
+            "key": "sampleApp",
+            "title": "Sample App",
+            "description": "Sample app for oauth",
+            "clientId": "1234",
+            "secret": "1234",
+            "url": "http://localhost:4000",
+            "redirectUris": ["http://localhost:4000/_oauth/lea"],
+            "grants": ["authorization_code"]
+        },
+        {
+            "key": "calendar",
+            "title": "Calendar",
+            "description": "A calendar service application",
+            "clientId": "porhLyvwTdhJgdda8",
+            "secret": "1234",
+            "url": "http://localhost:5050",
+            "redirectUris": ["http://localhost:5050/_oauth/lea"],
+            "grants": ["authorization_code"]
+        }
+    ],
+    "accounts": {
+        "fixtures": [
+            {
+                "email": "qwerty@qwerty.com",
+                "password": "Qwerty1"
+            }
+        ]
+    }
+}

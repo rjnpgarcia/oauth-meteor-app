@@ -1,0 +1,24 @@
+{
+    "public": {},
+    "redisOplog": {
+        "redis": {
+            "port": 6379,
+            "host": "127.0.0.1"
+        },
+        "retryIntervalMs": 10000,
+        "mutationDefaults": {
+            "optimistic": true,
+            "pushToRedis": true
+        },
+        "debug": false
+    },
+    "oauth": {
+        "clientId": "1234",
+        "secret": "1234",
+        "dialogUrl": "http://localhost:5000/oauth/authorize",
+        "accessTokenUrl": "http://localhost:5000/oauth/token",
+        "authorizeUrl": "http://localhost:5000/oauth/authorize",
+        "identityUrl": "http://localhost:5000/oauth/ident",
+        "redirectUrl": "http://localhost:4000/_oauth/lea"
+    }
+}
